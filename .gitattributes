@@ -1,0 +1,27 @@
+* text=auto !eol
+/LICENSE.txt -text
+/README.txt -text
+/bt-manage.php -text
+css/admin.css -text
+css/bt_button.css -text
+css/sbc_widget.css -text
+css/style.css -text
+data/index.php -text
+img/btn-20x20.png -text
+js/bt_button.js -text
+js/sbc-widget-preview.js -text
+js/script.js -text
+lib/sqlite/sqlite.class.php -text
+pages/index.php -text
+pages/new.php -text
+/sbc-widget-preview.php -text
+/sbc-widget.php -text
+/sbc.php -text
+/screenshot-1.png -text
+/screenshot-2.png -text
+/screenshot-3.png -text
+/screenshot-4.png -text
+/screenshot-5.png -text
+/screenshot-6.png -text
+/screenshot-7.png -text
+/screenshot-8.png -text
