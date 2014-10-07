@@ -51,12 +51,4 @@ You can contact me either through [GitHub issues page](https://github.com/robbyc
 1. Simple Buttons Creator widget settings in Page Builder
 ![Simple Buttons Creator widget settings in Page Builder](https://raw.githubusercontent.com/robbychen/simple-buttons-creator/master/screenshot-8.png)
 
-## Changelog
-
-### 1.0
-* Initial release
-
-## Upgrade Notice
-
-### 1.0
-This is a initial release. No upgrade is necessary.
+### For Changelog and Upgrade Notice sections, please read the last two sections in README.txt

@@ -2,13 +2,13 @@
 
 class sbc_widget extends WP_Widget {
 
-	var $buttons;
+	var $buttons;	// Stores the SQLite database object
 
 	/**
 	 * Register widget with WordPress.
 	 */
 	function __construct() {
-		$this->buttons = new sqlite(dirname(__FILE__) . "/data/sbc.sqlite", "buttons");
+		$this->buttons = new sqlite($_SERVER['DOCUMENT_ROOT'] . "/wp-content/data", "sbc", "buttons");
 		parent::__construct(
 			'sbc_widget',
 			__('Simple Buttons Creator', 'sbc_widget'),
@@ -34,14 +34,16 @@ class sbc_widget extends WP_Widget {
 	 * @param array $args     Widget arguments.
 	 * @param array $instance Saved values from database.
 	 */
-	public function widget( $args, $instance ) {	
-        echo $args['before_widget'];
+	public function widget( $args, $instance ) {
+    echo $args['before_widget'];
 		if ( ! empty( $instance['button_select'] ) ) {
 			$button = $instance['button_select'];
+			$bt_css = $this->buttons->get_option("bt_css", "", $button);
+			$bt_txt_color = "color: " . $this->buttons->get_option("bt_txt_color", "", $button) . " !important;";
 ?>
-			<div class="sbc_buttons">
+			<div class="sbc_buttons sbc_<?php echo $button; ?>">
 				<a href="<?php echo $this->buttons->get_option("bt_link", "#", $button); ?>"
-					 style="padding: 10px; <?php echo $this->buttons->get_option("bt_css", "", $button); ?>">
+					 style="padding: 10px; <?php echo $bt_css . $bt_txt_color; ?>">
 					<?php echo $this->buttons->get_option("bt_text", "Button", $button); ?>
 				</a>
 			</div>

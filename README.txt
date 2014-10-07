@@ -1,6 +1,6 @@
 === Simple Buttons Creator ===
 Contributors: robbychen
-Tags: button, widget
+Tags: button, widget, sqlite
 Requires at least: 3.0.1
 Tested up to: 4.0
 License: GPLv2 or later
@@ -47,7 +47,28 @@ You can contact me either through [GitHub issues page](https://github.com/robbyc
 = 1.0 =
 * Initial release
 
+= 1.01 =
+* Fixed missing link color issue
+
+= 1.02 =
+* Updated sqlite class to preserve the database when updating the plugin.
+
+= 1.02.1 =
+* Dummy update to test the sqlite database
+
+= 1.03 =
+* Added an internal style for correctly displaying the button text color.
+
+= 1.03.1 =
+* Fixed a PHP offset error which could cause white screen in the front page.
+
+= 1.03.2 =
+* Fixed a PHP style error which could cause white screen in the front page.
+
 == Upgrade Notice ==
 
 = 1.0 =
 This is a initial release. No upgrade is necessary.
+
+= 1.02 =
+* This upgrade will reset the database. Make sure to backup the details for all your created buttons before upgrading.

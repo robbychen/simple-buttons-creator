@@ -17,9 +17,11 @@ else:
 		private $db;
 		public $tableName;
 
-		function __construct($filePath, $tableName) {
+		function __construct($filePath, $fileName, $tableName='') {
+			if (!file_exists($filePath)) mkdir($filePath, 0777, true);
+			if (empty($tableName)) $tableName = $fileName;
 			$this->tableName = $tableName;
-			$this->db = new PDO("sqlite:" . $filePath);
+			$this->db = new PDO("sqlite:" . $filePath . "/" . $fileName . ".sqlite");
 			$this->createTable();
 		}
 
