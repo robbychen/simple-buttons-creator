@@ -1,0 +1,1 @@
+jQuery(document).ready(function(e){e("body").on("change",".sbc_widget_buttons",function(){e.getScript(currentPath+"/js/sbc-widget-preview.js");e.get(currentPath+"/sbc-widget-preview.php",{id:e(this).val()},function(t){e(".sbc_widget_preview").html(t)})});e(".widget-inside").show()});
